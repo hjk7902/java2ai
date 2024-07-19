@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>MQTT Client Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height">
+    <script src="https://unpkg.com/mqtt/dist/mqtt.min.js"></script>
+    <style>
+        div {
+            width: 100%;
+            height: 100%;
+        }
+        img#cameraView {
+            max-width: 100%;
+            max-height: 100%;
+            bottom: 0;
+            left: 0;
+            margin: auto;
+            overflow: auto;
+            position: fixed;
+            right: 0;
+            top: 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>MQTT Client Example</h1>
+    <div align="center">
+        <img id="cameraView" width="100%" height="100%"/>
+    </div>
+    <script type="text/javascript">
+        // MQTT 브로커 연결 설정
+        const broker = 'ws://localhost:9001'; // WebSocket을 통한 MQTT 연결 (예: mosquitto)
+        const topic = '/camera/objects';
+
+        // MQTT 클라이언트 생성 및 연결
+        const client = mqtt.connect(broker);
+
+        client.on('connect', () => {
+            console.log('Connected to broker');
+            client.subscribe(topic, (err) => {
+                if (!err) {
+                    console.log(`Subscribed to topic: ${topic}`);
+                }
+            });
+        });
+
+        // 메시지 수신 시 처리
+        client.on('message', (topic, message) => {
+            try {
+                // 메시지의 payload를 JSON으로 파싱
+                const payload = JSON.parse(message.toString());
+
+                // base64 이미지 추출
+                const base64Image = payload.image;
+
+                // img 태그의 src 속성에 base64 이미지 설정
+                document.getElementById("cameraView").src = `data:image/jpg;base64,${base64Image}`;
+            } catch (e) {
+                console.error('Failed to parse message payload:', e);
+            }
+        });
+
+        client.on('error', (error) => {
+            console.error('Connection error:', error);
+        });
+
+        client.on('close', () => {
+            console.log('Disconnected from broker');
+        });
+    </script>
+</body>
+</html>
