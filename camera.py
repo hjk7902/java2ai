@@ -7,13 +7,13 @@ import paho.mqtt.client as mqtt
 import json
 from ultralytics import YOLO
 
+# YOLO 모델 로드
+model = YOLO('yolov8n.pt')
+
 # MQTT 설정
 broker = 'localhost'
 port = 1883
 topic = '/camera/objects'
-
-# YOLO 모델 로드
-model = YOLO('yolov8n.pt')
 
 # MQTT 클라이언트 설정
 client = mqtt.Client()
@@ -52,14 +52,14 @@ def detect_objects(image: np.array):
         for box, confidence, class_id in zip(boxes, confidences, class_ids):
             x1, y1, x2, y2 = map(int, box) # 좌표를 정수로 변환
             label = class_names[int(class_id)] # 클래스 이름
-            cv2.rectangle(image, (x1,y1), (x2,y2), (255,0,0), 2)
+            cv2.rectangle(image, (x1,y1), (x2,y2), colors[int(class_id)], 2)
             cv2.putText(image, f'{label} {confidence:.2f}', (x1,y1), cv2.FONT_HERSHEY_SIMPLEX, 0.9, (255,0,0), 2)
 
     return image
 
 
 # 카메라에서 프레임 캡처
-cap = cv2.VideoCapture(0)
+cap = cv2.VideoCapture(0, cv2.CAP_DSHOW)
 
 while cap.isOpened():
     ret, frame = cap.read()
