@@ -4,8 +4,10 @@
 * 책 POD : [https://bookk.co.kr/bookStore/66a35c45d13a138d35e6a575](https://bookk.co.kr/bookStore/66a35c45d13a138d35e6a575)
 
 ## 1장 아키텍처
-![image](https://github.com/user-attachments/assets/efdcd972-df0f-4a95-85db-db10862f8dd8)
+![image](https://github.com/user-attachments/assets/13de44ac-236e-4989-9e5d-2acc0d91f3bb)
+
 
 
 ## 2장 아키텍처
-![image](https://github.com/user-attachments/assets/bde14354-e9e0-4939-90d1-7ae089d1d49e)
+![image](https://github.com/user-attachments/assets/2d392bb9-51af-4c37-8e87-4b55ec2a4bc5)
+
