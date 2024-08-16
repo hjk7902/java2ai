@@ -1,5 +1,4 @@
 from fastapi import FastAPI, UploadFile, File, Form
-from fastapi.responses import JSONResponse
 from pydantic import BaseModel
 import io
 import base64
@@ -19,7 +18,7 @@ class DetectionResult(BaseModel):
     image: str
 
 
-def detect_objects(image: Image.Image):
+def detect_objects(image: Image):
     img = np.array(image) # 이미지를 numpy 배열로 변환
     results = model(img) # 객체 탐지
     class_names = model.names # 클래스 이름 저장
@@ -68,5 +67,4 @@ async def detect_service(message: str = Form(...), file: UploadFile = File(...))
 
 if __name__ == "__main__":
     import uvicorn
-
     uvicorn.run(app, host="0.0.0.0", port=8000)
