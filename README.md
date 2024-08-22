@@ -3,6 +3,8 @@
 * 책 PDF : [https://bookk.co.kr/bookStore/66bb0ebed09ad50c7f030d77](https://bookk.co.kr/bookStore/66bb0ebed09ad50c7f030d77)
 * 책 POD : [https://bookk.co.kr/bookStore/66a35c45d13a138d35e6a575](https://bookk.co.kr/bookStore/66a35c45d13a138d35e6a575)
 
+## 인프런에서 `나자바바`로 검색하세요. 관련 강의를 찾을 수 있습니다.
+
 ## 1장 아키텍처
 ![image](https://github.com/user-attachments/assets/e1d6623c-83f9-4d86-b054-ee6978c8f7e6)
 
