@@ -24,7 +24,7 @@ def on_connect(client, userdata, flags, rc):
 
 
 client.on_connect = on_connect
-client.connect(broker, port, 60)
+client.connect(broker, port)
 
 
 # 클래스 라벨별 색상 설정 함수
