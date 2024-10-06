@@ -5,7 +5,8 @@
 
 ## 인프런에서 `나자바바`로 검색하세요. 관련 강의를 찾을 수 있습니다.
 * 강좌명: 자바 스프링 부트 프로젝트와 파이썬 AI 프로젝트 연결하기
-* 강의 주소: https://www.inflearn.com/course/%EC%9E%90%EB%B0%94-%EC%8A%A4%ED%94%84%EB%A7%81%EB%B6%80%ED%8A%B8-%ED%8C%8C%EC%9D%B4%EC%8D%AC-ai-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8
+* 강의 주소: https://www.inflearn.com/course/자바-스프링부트-파이썬-ai-프로젝트
+* 단축 주소: https://inf.run/izXES
 
 ## 1장
 * 1장의 내용은 자바 스프링 부트를 이용한 웹 프로젝트 생성 및 실행과 파이썬 FastAPI를 이용한 웹프로젝트 생성 및 실행에 관해 설명합니다.
