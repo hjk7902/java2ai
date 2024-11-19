@@ -7,6 +7,8 @@
 * 강좌명: 자바 스프링 부트 프로젝트와 파이썬 AI 프로젝트 연결하기
 * 강의 주소: https://www.inflearn.com/course/자바-스프링부트-파이썬-ai-프로젝트
 * 단축 주소: https://inf.run/izXES
+* ![image](https://github.com/user-attachments/assets/5143ad00-6bb7-4a47-b41e-06dede60edfa)
+
 
 ## 1장
 * 1장의 내용은 자바 스프링 부트를 이용한 웹 프로젝트 생성 및 실행과 파이썬 FastAPI를 이용한 웹프로젝트 생성 및 실행에 관해 설명합니다.
