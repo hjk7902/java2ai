@@ -22,5 +22,7 @@
 
 ## 3장 아키텍처
 * 3장은 아래의 아키텍처를 구현합니다.
-![image](https://github.com/user-attachments/assets/2d392bb9-51af-4c37-8e87-4b55ec2a4bc5)
+![image](https://github.com/user-attachments/assets/8991ea8e-6f83-4e4d-b104-3ae3cec00d36)
+
+  
 
