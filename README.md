@@ -16,7 +16,8 @@
   
 ## 2장
 * 2장은 다음 아키텍처를 구현합니다.
-![image](https://github.com/user-attachments/assets/e1d6623c-83f9-4d86-b054-ee6978c8f7e6)
+![image](https://github.com/user-attachments/assets/1e91caa0-cb99-4a73-80b4-e5b8ca52908e)
+
 
 
 ## 3장 아키텍처
